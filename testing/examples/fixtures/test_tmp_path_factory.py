@@ -14,3 +14,7 @@ def test_to_csv(my_tmp_path):
 
     read = Table.read(my_tmp_path / 'test.csv')
     assert np.all(read == t)
+
+def test_csv(my_tmp_path):
+    # this fails with scope "function" and passes with scope "session"
+    assert (my_tmp_path / 'test.csv').exists()
