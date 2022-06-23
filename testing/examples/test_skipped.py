@@ -9,3 +9,7 @@ def test_using_numpy():
 @pytest.mark.skipif(sys.platform != 'win32', reason="windows only")
 def test_windows():
     assert os.path.exists('C:\\')
+
+@pytest.mark.skipif(sys.platform != 'linux', reason="linux only")
+def test_macos():
+    assert os.path.exists('.')
