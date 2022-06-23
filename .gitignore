@@ -1,5 +1,6 @@
 # files and folders
 loadenv.sh
+*.pstats
 
 awesome_plot.*
 sine_wave.mp4
